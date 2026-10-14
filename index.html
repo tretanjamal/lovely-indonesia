@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lovely Indonesia - Media Belajar Bahasa Inggris Kelas 8</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap">
+<style>
+:root{--bg:#EEF6F1;--card:#fff;--ink:#14304A;--mute:#4D6274;--line:#D3E2DA;--head:#14304A;--headink:#fff;--goodbg:#DDF3E8;--good:#17674A;--badbg:#FBE2E0;--bad:#9E1F18;--chip:#EEF3F8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0F1E2B;--card:#172B3C;--ink:#EAF2F7;--mute:#A5B8C7;--line:#2B4458;--head:#0A1620;--goodbg:#12382B;--good:#6FD3A6;--badbg:#43201F;--bad:#FF9A92;--chip:#21394C}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0F1E2B;--card:#172B3C;--ink:#EAF2F7;--mute:#A5B8C7;--line:#2B4458;--head:#0A1620;--goodbg:#12382B;--good:#6FD3A6;--badbg:#43201F;--bad:#FF9A92;--chip:#21394C}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:Fredoka,"Trebuchet MS",sans-serif;margin:0;line-height:1.2}
+header{background:var(--head);color:var(--headink);padding:28px 16px 24px;background-image:radial-gradient(circle,transparent 38%,rgba(255,255,255,.13) 40% 58%,transparent 60%);background-size:30px 30px;border-bottom:6px solid #F2B134}
+.wrap{max-width:860px;margin:0 auto}
+header h1{font-size:clamp(2rem,7vw,3.2rem)}
+header p{margin:6px 0 0;max-width:60ch;opacity:.92}
+.passport{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px auto 0;max-width:860px;padding:0 16px}
+.stamp{display:flex;align-items:center;gap:8px;background:var(--card);border:2px dashed var(--line);border-radius:14px;padding:6px 12px;font-weight:700;font-size:.9rem}
+.stamp.on{border:2px solid var(--c);}
+.stamp span{font-size:1.3rem;filter:grayscale(1);opacity:.45}
+.stamp.on span{filter:none;opacity:1}
+.total{margin-left:auto;font-family:Fredoka,sans-serif;font-size:1.15rem}
+nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;padding:16px;max-width:860px;margin:0 auto}
+nav button{font:inherit;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:18px;padding:12px 14px;cursor:pointer}
+nav button[aria-selected="true"]{border-color:var(--c);box-shadow:0 4px 0 var(--c)}
+nav b{display:block;font-family:Fredoka,sans-serif;font-size:1.1rem}
+nav small{color:var(--mute)}
+main{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:16px}
+.card h2{font-size:1.5rem;margin-bottom:4px;color:var(--c)}
+.card h3{font-size:1.1rem;margin:14px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.chip{background:var(--chip);border-radius:999px;padding:4px 12px;font-size:.92rem}
+.chip b{color:var(--c)}
+.ex{border-left:5px solid var(--c);background:var(--chip);border-radius:6px 12px 12px 6px;padding:8px 12px;margin:8px 0}
+.q{padding:14px 0;border-top:1px solid var(--line)}
+.q p{margin:0 0 10px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.opt{font:inherit;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:9px 12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt:disabled{cursor:default;color:var(--ink);opacity:.8}
+.opt.ok{background:var(--goodbg);border-color:var(--good);opacity:1;font-weight:800}
+.opt.no{background:var(--badbg);border-color:var(--bad);opacity:1}
+.fb{margin:10px 0 0;padding:8px 12px;border-radius:10px;font-size:.95rem}
+.fb.g{background:var(--goodbg);color:var(--good)}
+.fb.b{background:var(--badbg);color:var(--bad)}
+.btn{font:700 1rem Nunito,sans-serif;background:var(--c);color:#fff;border:0;border-radius:999px;padding:10px 20px;cursor:pointer;margin:6px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.result{text-align:center}
+.result .big{font-family:Fredoka,sans-serif;font-size:2.4rem;color:var(--c)}
+:focus-visible{outline:3px solid #F2B134;outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.stamp.on span{animation:pop .5s}@keyframes pop{from{transform:scale(.3) rotate(-20deg)}to{transform:none}}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Lovely Indonesia</h1>
+<p>Jalan-jalan keliling Madura sambil belajar Bahasa Inggris. Ada 4 pos: pelajari materinya, jawab 5 soal, lalu kumpulkan cap di paspormu. Untuk Fase D, Kelas 8 SMP.</p>
+</div></header>
+<div class="passport" id="passport" aria-live="polite"></div>
+<nav id="nav" role="tablist" aria-label="Pilih pos"></nav>
+<main id="panel"></main>
+<script>
+const S=[
+{p:"Pasar Pamekasan",e:"🛍️",t:"Quantifiers",c:"#C8512C",
+learn:`<p>Di pasar, kita sering bicara tentang jumlah barang. Quantifiers (kata penunjuk jumlah) dipilih sesuai jenis bendanya.</p>
+<h3>Countable (bisa dihitung: stalls, sandals, sticks)</h3>
+<div class="chips"><span class="chip"><b>many</b> banyak</span><span class="chip"><b>a few</b> beberapa</span><span class="chip"><b>few</b> hampir tidak ada</span><span class="chip"><b>How many</b> berapa banyak</span></div>
+<h3>Uncountable (tidak bisa dihitung: money, salt, rice)</h3>
+<div class="chips"><span class="chip"><b>much</b> banyak</span><span class="chip"><b>a little</b> sedikit</span><span class="chip"><b>little</b> hampir tidak ada</span><span class="chip"><b>How much</b> berapa banyak</span></div>
+<h3>Keduanya</h3>
+<div class="chips"><span class="chip"><b>some</b> (kalimat positif)</span><span class="chip"><b>any</b> (negatif dan tanya)</span><span class="chip"><b>a lot of</b></span><span class="chip"><b>plenty of</b></span></div>
+<div class="ex">There are <b>many</b> stalls in the market, but I don't have <b>much</b> money.</div>`,
+q:[
+{t:"There are ___ colorful batik cloths in the market.",c:"many",w:["much","a little"],e:"Cloths bisa dihitung (countable), jadi pakai many."},
+{t:"I don't have ___ money, so I can only buy one souvenir.",c:"much",w:["many","a few"],e:"Money tidak bisa dihitung (uncountable) dan kalimatnya negatif, jadi much."},
+{t:"\"Are there ___ cheap sandals here?\"",c:"any",w:["some","much"],e:"Pada kalimat tanya, kita pakai any."},
+{t:"There is only ___ salt left, so please share it.",c:"a little",w:["a few","many"],e:"Salt uncountable. A little berarti sedikit tetapi masih ada."},
+{t:"How ___ sticks of satay do you want?",c:"many",w:["much","little"],e:"Sticks bisa dihitung, jadi How many."}]},
+{p:"Monumen Arek Lancor",e:"🏛️",t:"Preposition of Place",c:"#8A5A12",
+learn:`<p>Preposition of place menunjukkan di mana letak suatu benda atau orang. Berguna untuk bertanya dan memberi arah.</p>
+<div class="chips"><span class="chip"><b>in</b> di dalam</span><span class="chip"><b>on</b> di atas / di (nama jalan)</span><span class="chip"><b>at</b> di (titik tertentu)</span><span class="chip"><b>under</b> di bawah</span><span class="chip"><b>between</b> di antara dua</span><span class="chip"><b>in front of</b> di depan</span><span class="chip"><b>behind</b> di belakang</span><span class="chip"><b>next to</b> di sebelah</span><span class="chip"><b>opposite</b> di seberang</span></div>
+<div class="ex">The satay stall is <b>next to</b> the mosque, <b>opposite</b> the monument.</div>
+<div class="ex">The batik shop is <b>on</b> the main street.</div>`,
+q:[
+{t:"The satay stall is ___ the bank and the mosque.",c:"between",w:["under","behind"],e:"Between dipakai untuk posisi di antara dua tempat."},
+{t:"The tourists are taking photos ___ the Arek Lancor Monument.",c:"in front of",w:["under","between"],e:"Mereka berfoto di depan monumen, jadi in front of."},
+{t:"The batik shop is ___ the main street.",c:"on",w:["between","behind"],e:"Untuk nama jalan, kita pakai on."},
+{t:"The hotel is ___ the mosque. You can see it across the street.",c:"opposite",w:["between","inside"],e:"Opposite berarti berseberangan."},
+{t:"A small park is ___ the monument, so you can't see it from the front.",c:"behind",w:["in front of","on"],e:"Tidak terlihat dari depan, artinya letaknya behind (di belakang)."}]},
+{p:"Pantai Lombang",e:"🏖️",t:"Express Opinion",c:"#0F7C8C",
+learn:`<p>Setelah berkeliling, kita bisa saling bertukar pendapat tentang tempat yang dikunjungi.</p>
+<h3>Meminta pendapat</h3>
+<div class="chips"><span class="chip"><b>What do you think of...?</b></span><span class="chip"><b>How do you feel about...?</b></span></div>
+<h3>Memberi pendapat</h3>
+<div class="chips"><span class="chip"><b>I think...</b></span><span class="chip"><b>In my opinion,...</b></span><span class="chip"><b>I believe...</b></span><span class="chip"><b>I feel that...</b></span></div>
+<h3>Setuju dan tidak setuju</h3>
+<div class="chips"><span class="chip"><b>I agree.</b></span><span class="chip"><b>I couldn't agree more.</b></span><span class="chip"><b>I see your point, but...</b></span><span class="chip"><b>I'm afraid I don't agree.</b></span></div>
+<div class="ex">A: What do you think of Pantai Lombang?<br>B: <b>In my opinion</b>, it's one of the most beautiful beaches in Madura.</div>`,
+q:[
+{t:"Your friend says, \"Pantai Lombang is one of the most beautiful beaches in Madura.\" You strongly agree. You say:",c:"I couldn't agree more.",w:["I don't think so.","That's wrong."],e:"I couldn't agree more berarti sangat setuju."},
+{t:"Which one is NOT used to give an opinion?",c:"Thank you very much.",w:["In my opinion,...","I believe..."],e:"Thank you very much adalah ungkapan terima kasih."},
+{t:"A friend says, \"Tourists don't need to throw rubbish in the bin.\" Which is the most polite disagreement?",c:"I'm afraid I don't agree. We must keep the beach clean.",w:["That's stupid!","No way. Be quiet!"],e:"Tidak setuju boleh, tetapi tetap sopan dan beri alasan."},
+{t:"___ my opinion, Madura is a lovely island.",c:"In",w:["At","On"],e:"Ungkapan tetapnya adalah In my opinion."},
+{t:"___ do you think of Madura satay?",c:"What",w:["Who","Where"],e:"Untuk menanyakan pendapat: What do you think of...?"}]},
+{p:"Dapur Sate Madura",e:"🍢",t:"Give Instruction",c:"#B4283A",
+learn:`<p>Di dapur sate, pemandu memberi petunjuk. Instruction memakai kalimat imperatif, yaitu kata kerja bentuk dasar tanpa subjek.</p>
+<div class="chips"><span class="chip"><b>Positif:</b> Wear an apron.</span><span class="chip"><b>Negatif:</b> Don't touch the hot grill.</span><span class="chip"><b>Sopan:</b> Please... / Could you please...?</span></div>
+<h3>Kata urutan langkah</h3>
+<div class="chips"><span class="chip"><b>First</b></span><span class="chip"><b>Then / Next</b></span><span class="chip"><b>After that</b></span><span class="chip"><b>Finally</b></span></div>
+<h3>Tanda larangan</h3>
+<div class="chips"><span class="chip"><b>No smoking</b> dilarang merokok</span><span class="chip"><b>Keep off the grass</b> jangan injak rumput</span></div>
+<div class="ex"><b>First</b>, cut the chicken. <b>Then</b>, put it on the sticks. <b>Finally</b>, grill it.</div>`,
+q:[
+{t:"___ an apron before you start cooking.",c:"Wear",w:["Wearing","You wears"],e:"Kalimat perintah memakai kata kerja bentuk dasar: Wear."},
+{t:"___ touch the hot grill.",c:"Don't",w:["Not","Doesn't"],e:"Perintah negatif memakai Don't + kata kerja dasar."},
+{t:"First, cut the chicken. ___, put it on the sticks. Finally, grill it.",c:"Then",w:["But","Because"],e:"Then menunjukkan langkah berikutnya dalam urutan."},
+{t:"There is a sign near the grill: \"No smoking.\" It means:",c:"Don't smoke here.",w:["You may smoke here.","Please buy cigarettes."],e:"No smoking berarti dilarang merokok."},
+{t:"Which is the most polite instruction?",c:"Could you please pass the peanut sauce?",w:["Pass the sauce now!","You must pass it."],e:"Could you please... adalah bentuk permintaan yang paling sopan."}]}
+];
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const st=[];let cur=0;
+function init(i){S[i].q.forEach(q=>q.o=sh([q.c,...q.w]));st[i]={a:Array(S[i].q.length).fill(null)}}
+S.forEach((_,i)=>init(i));
+const score=i=>st[i].a.reduce((n,a,k)=>n+(a!==null&&S[i].q[k].o[a]===S[i].q[k].c?1:0),0);
+const done=i=>st[i].a.every(a=>a!==null);
+function pick(i,k,o){if(st[i].a[k]===null){st[i].a[k]=o;draw()}}
+function go(i){cur=i;draw();window.scrollTo({top:document.getElementById('nav').offsetTop-8})}
+function redo(i){init(i);draw()}
+function reset(){S.forEach((_,i)=>init(i));cur=0;draw()}
+function qh(i,k){const q=S[i].q[k],a=st[i].a[k];
+return `<div class="q"><p><b>${k+1}.</b> ${q.t}</p><div class="opts">${q.o.map((o,n)=>{let c="opt";if(a!==null){if(o===q.c)c+=" ok";else if(n===a)c+=" no"}return `<button class="${c}" ${a!==null?"disabled":""} onclick="pick(${i},${k},${n})">${o}</button>`}).join("")}</div>${a!==null?`<p class="fb ${q.o[a]===q.c?"g":"b"}">${q.o[a]===q.c?"Benar! ":"Belum tepat. "}${q.e}</p>`:""}</div>`}
+function draw(){
+const tot=S.reduce((n,_,i)=>n+score(i),0),all=S.every((_,i)=>done(i));
+document.getElementById("passport").innerHTML=S.map((s,i)=>`<div class="stamp ${done(i)?"on":""}" style="--c:${s.c}"><span>${s.e}</span>${s.p}${done(i)?" "+score(i)+"/5":""}</div>`).join("")+`<div class="total">Skor: ${tot}/20</div>`;
+document.getElementById("nav").innerHTML=S.map((s,i)=>`<button role="tab" aria-selected="${i===cur}" style="--c:${s.c}" onclick="go(${i})"><b>${s.e} ${s.p}</b><small>Pos ${i+1}: ${s.t}</small></button>`).join("");
+const s=S[cur];let h=`<section class="card" style="--c:${s.c}"><h2>${s.e} ${s.p}: ${s.t}</h2>${s.learn}</section><section class="card" style="--c:${s.c}"><h2>Latihan</h2>${s.q.map((_,k)=>qh(cur,k)).join("")}`;
+if(done(cur)){const sc=score(cur);h+=`<div class="result q"><div class="big">${sc}/5</div><p>${sc===5?"Sempurna! Cap "+s.p+" sudah masuk paspormu.":sc>=3?"Bagus! Cap "+s.p+" sudah masuk paspormu.":"Cap sudah kamu dapat, tetapi coba ulangi untuk skor lebih tinggi."}</p>`+
+(cur<S.length-1?`<button class="btn" onclick="go(${cur+1})">Lanjut ke ${S[cur+1].p}</button>`:"")+`<button class="btn alt" onclick="redo(${cur})">Ulangi latihan</button></div>`}
+h+="</section>";
+if(all){const t=S.reduce((n,_,i)=>n+score(i),0);h+=`<section class="card result" style="--c:#C8512C"><h2>Paspor lengkap!</h2><div class="big">${t}/20</div><p>${t>=18?"Gelar: Duta Wisata Madura":t>=14?"Gelar: Pemandu Wisata Hebat":"Gelar: Wisatawan Pemberani. Ulangi latihan untuk naik level!"}</p><button class="btn" onclick="reset()">Main dari awal</button></section>`}
+document.getElementById("panel").innerHTML=h}
+draw();
+</script>
+</body>
+</html>
